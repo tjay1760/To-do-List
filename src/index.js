@@ -27,14 +27,14 @@ function saveTodoItems() {
   localStorage.setItem('todoItems', JSON.stringify(todoItems));
 }
 function fixindex() {
-  for (let i = 0; i < todoItems.length; i+=1) {
+  for (let i = 0; i < todoItems.length; i += 1) {
     todoItems[i].index = i;
   }
   saveTodoItems();
 }
 function checkboxCheck() {
   const checkboxes = document.querySelectorAll('.checkbox');
-  for (let i = 0; i < checkboxes.length; i +=1) {
+  for (let i = 0; i < checkboxes.length; i += 1) {
     if (checkboxes[i].checked) {
       todoItems[i].completed = true;
     }
@@ -60,7 +60,7 @@ function editItem(label) {
   const editItem = document.querySelectorAll('.edit-item');
   label.contentEditable = true;
   label.addEventListener('blur', () => {
-    for (let i = 0; i < editItem.length; i+=1) {
+    for (let i = 0; i < editItem.length; i += 1) {
       todoItems[i].description = editItem[i].innerText;
     }
     saveTodoItems();
@@ -70,7 +70,7 @@ function editItem(label) {
 todoItems = getSavedTodoItems();
 function displayTodoItems() {
   todoList.innerHTML = '';
-  for (let i = 0; i < todoItems.length; i +=1) {
+  for (let i = 0; i < todoItems.length; i += 1) {
     const todoItem = todoItems[i];
     const item = document.createElement('li');
     item.classList.add('list-item');
@@ -95,7 +95,7 @@ function displayTodoItems() {
   fixindex();
 }
 function deleteTodoItem() {
-  for (let i = todoItems.length - 1; i >= 0; i-=1) {
+  for (let i = todoItems.length - 1; i >= 0; i -= 1) {
     if (todoItems[i].completed === true) {
       todoItems.splice(i, 1);
     }
