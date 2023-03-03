@@ -2,7 +2,28 @@
 const todoListItem = document.querySelector('.activity');
 const todoList = document.getElementsByClassName('todo-list')[0];
 const clearButton = document.querySelector('.clear');
-let todoItems = [];
+let todoItems = [
+  {
+    description: 'create a new todo',
+    completed: false,
+    index: 0,
+  },
+  {
+    description: 'create a new todo',
+    completed: false,
+    index: 1,
+  },
+  {
+    description: 'create a new todo',
+    completed: false,
+    index: 2,
+  },
+  {
+    description: 'create a new todo',
+    completed: false,
+    index: 3,
+  },
+];
 function saveTodoItems() {
   localStorage.setItem('todoItems', JSON.stringify(todoItems));
 }
@@ -11,7 +32,6 @@ function fixindex() {
     todoItems[i].index = i;
   }
   saveTodoItems();
-  return todoItems;
 }
 function checkboxCheck() {
   const checkboxes = document.querySelectorAll('.checkbox');
@@ -34,7 +54,7 @@ function addTodo(todo) {
 }
 function getSavedTodoItems() {
   const savedData = localStorage.getItem('todoItems');
-  return savedData ? JSON.parse(savedData) : [];
+  return savedData ? JSON.parse(savedData) : todoItems;
 }
 
 function editItem(label) {
