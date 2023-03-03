@@ -45,7 +45,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
 
 - **[User can add task]**
 - **[User can mark complete task]**
@@ -85,8 +84,6 @@ Clone this repository to your desired folder:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **John Thiongo**
 
 - GitHub: [@githubhandle](https://github.com/tjay1760)
@@ -98,8 +95,6 @@ Clone this repository to your desired folder:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **[User can re-arrange List Items]**
 - [ ] **[User friendly Styling]**
@@ -121,7 +116,6 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
 
 If you like this project give it a ⭐️
 
