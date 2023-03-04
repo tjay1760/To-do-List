@@ -1,4 +1,5 @@
 import getSavedTodoItems from '../modules/createList.js';
+import './index.css';
 
 const todoListItem = document.querySelector('.activity');
 const todoList = document.getElementsByClassName('todo-list')[0];
