@@ -87,7 +87,6 @@ Clone this repository to your desired folder:
 👤 **John Thiongo**
 
 - GitHub: [@githubhandle](https://github.com/tjay1760)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/john-thiongo-10484347/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
