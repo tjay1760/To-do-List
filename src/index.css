@@ -1,0 +1,59 @@
+.html {
+  box-sizing: border-box;
+}
+
+.todo {
+  margin-left: 10%;
+  margin-top: 15%;
+  margin-bottom: 2%;
+  border-top: 1px solid #ebebeb;
+  width: 35%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.todo-list-title {
+  border: 1px solid #ebebeb;
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.activity {
+  border: 1px solid #fff;
+  padding: 2%;
+  width: 100%;
+}
+
+.recycle {
+  margin-top: 3%;
+  color: #c3c3c3;
+}
+
+.list-item {
+  border: 1px solid #c7c7c7;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 2fr 15fr 1fr;
+  padding: 2%;
+}
+
+.todo-list {
+  margin: 0%;
+  padding: 0%;
+}
+
+.fa-ellipsis-v {
+  color: #c3c3c3;
+  margin-left: 50%;
+}
+
+.btn {
+  background-color: #c3c3c3;
+}
+
+.bg-color {
+  background-color: #f6f6f6;
+  width: 100%;
+  color: #b1b1b1;
+  padding: 2%;
+}
