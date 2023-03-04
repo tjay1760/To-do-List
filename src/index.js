@@ -1,3 +1,6 @@
+// eslint-disable-next-line import/extensions
+import './index.css';
+
 const todoListItem = document.querySelector('.activity');
 const todoList = document.getElementsByClassName('todo-list')[0];
 const clearButton = document.querySelector('.clear');
