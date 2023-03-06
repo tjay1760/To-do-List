@@ -1,4 +1,5 @@
 import getSavedTodoItems from '../modules/createList.js';
+import checkboxCheck from '../modules/checkbox.js';
 import './index.css';
 
 const todoListItem = document.querySelector('.activity');
@@ -14,15 +15,14 @@ function fixindex() {
   }
   saveTodoItems();
 }
-function checkboxCheck() {
-  const checkboxes = document.querySelectorAll('.checkbox');
-  for (let i = 0; i < checkboxes.length; i += 1) {
-    if (checkboxes[i].checked) {
-      todoItems[i].completed = true;
-    }
-  }
-  return todoItems;
-}
+// function checkboxCheck() {
+//   const checkboxes = document.querySelectorAll('.checkbox');
+//   for (let i = 0; i < checkboxes.length; i += 1) {
+//     if (checkboxes[i].checked) {
+//       todoItems[i].completed = true;
+//     }
+//   }
+// }
 
 function addTodo(todo) {
   const todolistObj = {
@@ -109,7 +109,7 @@ todoListItem.addEventListener('keydown', (event) => {
   }
 });
 clearButton.addEventListener('click', () => {
-  checkboxCheck();
+  checkboxCheck(todoItems);
   deleteTodoItem();
 });
 
