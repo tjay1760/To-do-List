@@ -62,6 +62,7 @@ function displayTodoItems() {
     label.classList.add('edit-item');
     const icon = document.createElement('i');
     icon.className = 'fas fa-ellipsis-v';
+    icon.classList.add('icon');
     item.appendChild(checkbox);
     item.appendChild(label);
     item.appendChild(icon);
@@ -71,6 +72,23 @@ function displayTodoItems() {
     editItem(label);
   }
   fixindex();
+
+  const icons = Array.from(document.querySelectorAll('.icon'));
+
+  function toggleDeleteIcon(icon) {
+    icon.classList.toggle('fa-trash-alt');
+    icon.classList.toggle('fa-ellipsis-v');
+  }
+
+  icons.forEach((icon) => {
+    icon.addEventListener('mouseover', () => {
+      toggleDeleteIcon(icon);
+    });
+
+    icon.addEventListener('mouseout', () => {
+      toggleDeleteIcon(icon);
+    });
+  });
 }
 function deleteTodoItem() {
   for (let i = todoItems.length - 1; i >= 0; i -= 1) {
@@ -93,4 +111,13 @@ todoListItem.addEventListener('keydown', (event) => {
 clearButton.addEventListener('click', () => {
   checkboxCheck();
   deleteTodoItem();
+});
+
+todoList.addEventListener('click', (event) => {
+  if (event.target.classList.contains('fa-trash-alt')) {
+    const itemId = parseInt(event.target.closest('.list-item').getAttribute('data-id'), 10);
+    todoItems = todoItems.filter((item) => item.index !== itemId);
+    saveTodoItems();
+    displayTodoItems();
+  }
 });
