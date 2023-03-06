@@ -27,7 +27,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Awesome Books] <a name="about-project"></a>
+# 📖 [To-do List] <a name="about-project"></a>
 
 > Single page application that allows users to keep track of their tasks.
 
@@ -40,6 +40,7 @@
 > HTML5
 > CSS
 > Javascript
+> Webpack 
 
 <!-- Features -->
 
@@ -71,12 +72,18 @@ In order to run this project you need:
 > Install Git in your computer Git
 > Any text editor VSCode
 > Install linters on your local env't
+> Browser of your choice i.e; Mozilla Firefox ,google chrome, etc
+> Terminal of your choice i.e; Git Bash
+
 
 ### Setup
 
 Clone this repository to your desired folder:
 
  git clone https://github.com/tjay1760/To-do-List.git
+ After cloning run 
+> npm run build
+> npm start
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
