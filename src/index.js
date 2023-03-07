@@ -15,14 +15,6 @@ function fixindex() {
   }
   saveTodoItems();
 }
-// function checkboxCheck() {
-//   const checkboxes = document.querySelectorAll('.checkbox');
-//   for (let i = 0; i < checkboxes.length; i += 1) {
-//     if (checkboxes[i].checked) {
-//       todoItems[i].completed = true;
-//     }
-//   }
-// }
 
 function addTodo(todo) {
   const todolistObj = {
@@ -56,6 +48,10 @@ function displayTodoItems() {
     checkbox.type = 'checkbox';
     checkbox.checked = todoItem.completed;
     checkbox.classList.add('checkbox');
+    checkbox.addEventListener('change', () => {
+      todoItem.completed = checkbox.checked;
+      saveTodoItems();
+    });
     const label = document.createElement('label');
     label.htmlFor = 'checkbox';
     label.innerText = todoItem.description;
@@ -91,11 +87,7 @@ function displayTodoItems() {
   });
 }
 function deleteTodoItem() {
-  for (let i = todoItems.length - 1; i >= 0; i -= 1) {
-    if (todoItems[i].completed === true) {
-      todoItems.splice(i, 1);
-    }
-  }
+  todoItems = todoItems.filter((item) => item.completed === false);
   saveTodoItems();
   displayTodoItems();
 }
