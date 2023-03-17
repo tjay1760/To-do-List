@@ -30,6 +30,7 @@
 }
 
 .list-item {
+  cursor: move;
   border: 1px solid #c7c7c7;
   list-style-type: none;
   display: grid;
@@ -60,4 +61,8 @@
 
 .fa-trash-alt {
   color: tomato;
+}
+
+.todo-list.sorted {
+  box-shadow: 0 0 10px green;
 }

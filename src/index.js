@@ -1,11 +1,26 @@
+import Sortable from 'sortablejs';
 import getSavedTodoItems from '../modules/createList.js';
 import checkboxCheck from '../modules/checkbox.js';
+import toggleDeleteIcon from '../modules/toggleicon.js';
 import './index.css';
 
 const todoListItem = document.querySelector('.activity');
 const todoList = document.getElementsByClassName('todo-list')[0];
 const clearButton = document.querySelector('.clear');
 let todoItems = [];
+
+Sortable.create(todoList, {
+  animation: 150,
+  ghostClass: 'blue-background-class',
+  onEnd: () => {
+    todoList.classList.add('sorted');
+
+    setTimeout(() => {
+      todoList.classList.remove('sorted');
+    }, 1000);
+  },
+});
+
 function saveTodoItems() {
   localStorage.setItem('todoItems', JSON.stringify(todoItems));
 }
@@ -113,3 +128,9 @@ todoList.addEventListener('click', (event) => {
     displayTodoItems();
   }
 });
+
+module.exports = {
+  editItem,
+  toggleDeleteIcon,
+  deleteTodoItem,
+};
