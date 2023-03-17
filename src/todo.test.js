@@ -1,6 +1,7 @@
 import { JSDOM } from 'jsdom';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
+
 const html = readFileSync(resolve(__dirname, './index.html'), 'utf8');
 const { window } = new JSDOM(html);
 const { document } = window;
